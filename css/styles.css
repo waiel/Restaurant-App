@@ -72,7 +72,7 @@ section {
 #footer {
   background-color: #444;
   color: #aaa;
-  font-size: 8pt;
+  font-size: 0.8em;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
@@ -85,6 +85,7 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align: center;
+  display: flex;
 }
 
 nav h1 {
@@ -105,7 +106,7 @@ nav h1 a {
   background-color: #eee;
   font-size: 17px;
   margin: 0;
-  width: calc(50% - 80px);
+  /* width: calc(50% - 80px); */
 }
 
 /* Display list items side by side */
@@ -149,6 +150,7 @@ nav h1 a {
   justify-content: center;
   display: flex;
   flex-direction: row;
+  padding: 10px 0 3px;
 }
 
 .filter-options h2 {
@@ -182,6 +184,7 @@ nav h1 a {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 #restaurants-list li {
@@ -192,7 +195,9 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: center;
-  width: 270px;
+  display: flex;
+  flex-direction: column;
+  width: 85%
 }
 
 #restaurants-list .restaurant-img {
@@ -213,11 +218,15 @@ nav h1 a {
   line-height: 1.3;
   margin: 20px 0 10px;
   text-transform: uppercase;
+  padding: 0 20px;
+  height: 25px;
 }
 
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
+  padding: 0 20px;
+  width: 60%
 }
 
 #restaurants-list li a {
@@ -338,4 +347,51 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+}
+
+/* Media Quires for responsive design  */
+
+@media (min-width: 930px) {
+  #restaurants-list li {
+    max-width: 30%;
+  }
+
+  #restaurants-list p {
+    width: 66%;
+  }
+
+  #restaurants-list li h1 {
+    height: 41px;
+  }
+
+  .inside header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
+
+@media (min-width: 650px) and (max-width: 929px) {
+
+  #restaurants-list li {
+    max-width: 20%;
+  }
+
+  #restaurants-list li h1 {
+    height: 35px;
+  }
+
+}
+
+@media (max-width: 580px) {
+  .filter-options {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .filter-options select {
+    width: 90%
+  }
 }

@@ -194,7 +194,7 @@ nav h1 a {
   margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   width: 85%
@@ -337,13 +337,32 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
+  border-radius: 5% 0px 5px 0px;
 }
 
 #reviews-list li p {
   margin: 0 0 10px;
+
+}
+
+#reviews-list li p:nth-child(1) {
+  width: 50%;
+  font-size: 1.2em;
   display: inline-block;
   line-height: 1;
+}
+
+#reviews-list li p:nth-child(2) {
   width: 50%;
+  display: inline-block;
+  font-size: 0.9em;
+  text-align: right;
+  line-height: 1;
+}
+
+#reviews-list li p:nth-child(3) {
+  color: darkred;
+  text-align: left;
 }
 
 #restaurant-hours td {
@@ -423,7 +442,7 @@ nav h1 a {
 @media (min-width: 650px) and (max-width: 929px) {
 
   #restaurants-list li {
-    max-width: 20%;
+    max-width: 100%;
   }
 
   #restaurants-list li h1 {

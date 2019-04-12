@@ -188,3 +188,18 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
+
+/**
+ * Make sure the browser support the service worker
+ */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("./js/serviceworker.js")
+    .then((registration) => {
+      //Registration worked
+      console.log('Registration succeeded');
+    })
+    .catch((error) => {
+      //Registration failed
+      console.log('Registration failed!');
+    });
+}

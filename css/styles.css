@@ -448,11 +448,6 @@ nav h1 a {
   #restaurants-list li h1 {
     height: 35px;
   }
-
-  #footer {
-    width: 100%;
-    position: relative;
-  }
 }
 
 @media (max-width: 580px) {
